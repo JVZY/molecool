@@ -5,6 +5,12 @@ A Python package for analyzing and visualizing pdb and xyz files. For MolSSI May
 Handles the primary functions
 """
 
+import os
+import numpy as np
+import matplotlib.pyplot as plt
+
+from mpl_toolkits.mplot3d import Axes3D
+
 def calculate_distance(rA, rB):
     # This function calculates the distance between two points given as numpy arrays.
     d=(rA-rB)
@@ -24,18 +30,6 @@ def open_pdb(f_loc):
             c.append(c2)
     coords = np.array(c)
     return sym, coords
-
-atomic_weights = {
-    'H': 1.0078,
-    'C': 12.0107,
-    'N': 14.0067,
-    'O': 15.999,
-    'P': 30.973762,
-    'F': 18.998403,
-    'Cl': 35.453,
-    'Br': 79.904,
-}
-
 
 def open_xyz(file_location):
 
@@ -142,18 +136,6 @@ def build_bond_list(coordinates, max_bond=1.5, min_bond=0):
                 bonds[(atom1, atom2)] = distance
 
     return bonds
-
-atom_colors = {
-    'H': 'white',
-    'C': '#D3D3D3',
-    'N': '#add8e6',
-    'O': 'red',
-    'P': '#FFA500',
-    'F': '#FFFFE0',
-    'Cl': '#98FB98',
-    'Br': '#F4A460',
-    'S': 'yellow'
-}
 
 def canvas(with_attribution=True):
     """
