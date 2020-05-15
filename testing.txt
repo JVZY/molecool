@@ -1,7 +1,7 @@
 I add ...
-<<<<<<< HEAD
+
 new line
-=======
+
 This line ...
+
 oh
->>>>>>> 3bd2e3ac7629736a7c98cf986b9f8dc1ec5f13ec
