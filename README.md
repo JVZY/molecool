@@ -25,6 +25,8 @@ To switch to an existing branch, refuse
 
 `git checkout branch_Name`
 
+To submit your feature to be incorporated into the master branch, you should submit a `Pull Request`. The repository maintainers will review your pull request before accepting your changes.
+
 ### Copyright
 
 Copyright (c) 2020, Hang Zhang
