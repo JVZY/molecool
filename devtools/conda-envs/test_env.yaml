@@ -7,7 +7,7 @@ dependencies:
 
   - numpy
   - matplotlib
-  
+
     # Testing
   - pytest
   - pytest-cov
